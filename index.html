@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link href='https://unpkg.com/css.gg@2.0.0/icons/css/more-vertical-alt.css' rel='stylesheet'>
+  <title>Frontend Mentor | Chat app CSS illustration</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    body{
+      background-color: hsl(270, 20%, 96%);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    h3{
+      color: white;
+      font-size: 16px;
+    }
+    b{
+      display: inline;
+      font-weight: 800;
+      font-size: 20px;
+    }
+    h4{
+font-size: 12px;
+    }
+    .card{
+max-width: 375px;
+padding: 10px;
+background-color: white;
+border-radius: 20px;
+    }
+    .head {
+      display: flex;
+      align-items: center;
+padding: 10px;     
+ background: linear-gradient(to right, hsl(293, 100%, 63%), hsl(264, 100%, 61%));
+      color: hsl(271, 36%, 24%);
+      border-radius: 20px 20px 0px 0px;
+    }
+
+    .head img {
+      border-radius: 1000px;
+      margin-right: 10px;
+      height: 50px;
+      align-self: flex-start;
+    }
+
+    .head-text {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+    }
+
+    .head h3, .head h4 {
+      margin: 0;
+    }
+    .chatbox{
+background-color: rgb(235, 234, 234);
+border-radius: 0px 0px 20px 20px;
+padding: 10px;
+    }
+    .msg1{
+background-color: hsl(268, 25%, 85%);
+color: hsl(276, 55%, 52%);
+width: 200px;
+border-radius: 10px 10px 10px 0px;
+padding: 5px;
+    }
+    .msg2{
+      background-color: white;
+      color: hsl(271, 15%, 43%);
+width: fit-content;
+border-radius: 10px;
+padding: 5px;
+margin-left: 150px;
+    }
+    .msg3{
+      background-color: white;
+      color: hsl(271, 15%, 43%);
+width: fit-content;
+border-radius: 10px;
+padding: 5px;
+margin-left: 230px;
+    }
+    .image-container {
+ display: flex;
+ justify-content: flex-end;
+ padding: 0%;
+
+}
+
+.image-container img {
+ max-width: 50px;
+ height: auto;
+ margin-right: 10px;
+ border-radius: 10px;
+}
+.duration{
+  display: flex;
+  flex-direction: column;
+}
+.msgdur{display: flex;
+  justify-content: space-between;
+  background: linear-gradient(to right,hsl(293, 100%, 63%),hsl(264, 100%, 61%));
+  width:250px;
+  color: white;
+  font-weight: 400;
+  font-size: 12px;
+  padding: 10px;
+  margin: 5px;
+  border-radius: 10px 10px 10px 0px;
+}
+.msgbox-container {
+  display: flex;
+  margin-top: 10px;
+  background-color: white;
+  border-radius: 50px;
+  padding: 5px;
+  height: 30px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.msgbox {
+  color: hsl(206, 6%, 79%);
+  flex: 1;
+  margin-right: 10px; 
+}
+
+.send-button {
+  background-color: hsl(271, 36%, 24%);
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+}
+.text{
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  width: 400px;
+  margin-left: 100px;
+}
+
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+    @media only screen and (max-width: 500px) {
+      body{
+        display: flex;
+        flex-wrap: wrap;
+
+      }
+      .text{
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+      }
+    }  
+    
+  </style>
+</head>
+<body>
+<div class="container">
+  <div class="card">
+ <div class="head"> 
+  <img src="images/avatar.jpg" style="border-radius: 1000px;" height="50px">
+  <div><h3>Samuel Green</h3>
+ <h4 >Available to Walk</h4>
+</div></div>
+<div class="chatbox">
+  <p class="msg1">That sounds great. I’d be happy with that.</p>
+
+  <p class="msg1">Could you send over some pictures of your dog, please?</p>
+
+  <div class="image-container">
+    <img src="images/dog-image-1.jpg" alt="dog 1">
+    <img src="images/dog-image-2.jpg" alt="dog 2">
+    <img src="images/dog-image-3.jpg" alt="dog 3">
+   </div>              
+                  
+  
+
+ <p class="msg2">Here are a few pictures. She’s a happy girl!</p> 
+
+  <p class="msg3">Can you make it?</p>
+
+  <p class="msg1">She looks so happy! The time we discussed works. How long shall I take her out for?</p>
+<div class="duration">
+  <div class="msgdur"> 30 minute walk
+  <b>$29</b></div>
+  <div class="msgdur"> 1 hour walk
+  <b>$49</b></div> 
+</div>
+  
+<div class="msgbox-container">
+  <p style="color: hsl(206, 6%, 79%);" class="msgbox">Type a message…</p>
+  <button class="send-button"></button>
+</div>
+</div>
+</div>
+</div>
+
+<div class="text">  
+  <h1>Simple booking</h1>
+
+  Stay in touch with our dog walkers through the chat interface. This makes it easy to 
+  discuss arrangements and make bookings. Once the walk has been completed you can rate 
+  your walker and book again all through the chat.
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Louis Viljoen</a>.
+  </div>  </div></div>
+
+</body>
+</html>
